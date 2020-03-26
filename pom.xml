@@ -3,10 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>SpringBootThymeleafTemplate</artifactId>
-	<name>SpringBootThymeleafTemplate</name>
+	<artifactId>SpringBootUploadParseCSV</artifactId>
+	<name>SpringBootUploadParseCSV</name>
 	<packaging>jar</packaging>
-	<description>SpringBootThymeleafTemplate demo</description>
+	<description>SpringBootUploadParseCSV demo</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
