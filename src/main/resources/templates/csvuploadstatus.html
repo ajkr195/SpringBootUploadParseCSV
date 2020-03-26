@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout}">
+<head>
+<title>Springboot Rocks</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<section class="my-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-10 mx-auto">
+						<h4>CSV details</h4>
+						<!--display error if any-->
+						<div class="alert alert-danger" role="alert" th:if="${!status}">
+							<strong>Error:</strong> <span th:text="${message}"></span>
+						</div>
+
+						<!--display appusers here from csv-->
+						<table class="table table-hover" th:if="${status}">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">ID</th>
+									<th scope="col">UserName</th>
+									<th scope="col">Password</th>
+									<th scope="col">Useremail</th>
+									<th scope="col">FirstName</th>
+									<th scope="col">LastName</th>
+									<th scope="col">Address</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="user, i : ${appuserslist}">
+									<th scope="row" th:text="${i.index + 1}"></th>
+									<td th:text="${user.id}"></td>
+									<td th:text="${user.username}"></td>
+									<td th:text="${user.password}"></td>
+									<td th:text="${user.useremail}"></td>
+									<td th:text="${user.userfirstname}"></td>
+									<td th:text="${user.userlastname}"></td>
+									<td th:text="${user.useraddress}"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

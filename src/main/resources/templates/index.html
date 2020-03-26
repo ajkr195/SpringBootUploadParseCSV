@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout}">
+<head>
+<title>Springboot Rocks</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<section class="my-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h4>SpringBoot Upload and Parse CSV File Example</h4>
+					</div>
+					<br /> <br /> <br /> <br />
+					<div class="row">
+						<div class="col-12 mx-auto">
+							<form method="POST" th:action="@{/uploadcsv}"
+								enctype="multipart/form-data">
+								<div class="row">
+									<label class="col-md-4 control-label text-right "
+										for="agencyheadname">Select CSV file : &nbsp&nbsp</label>
+									<div class="col-md-7 pull-left">
+										<div class="form-group">
+											<input type="file" name="file" accept=".csv"
+												required="required" />
+										</div>
+
+										<button type="submit" class="btn btn-sm btn-primary">Import
+											AppUsers</button>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+				</div>
+				<br /> <br />
+				<h6>Refer appusers.csv file in resources folder for format</h6>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>
